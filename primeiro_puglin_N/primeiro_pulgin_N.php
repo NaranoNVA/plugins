@@ -9,6 +9,7 @@
 * License: CC BY
 */
 
+//Mudar Mensagem no Login
 add_filter( 'login_errors', 'altera_msg_login' );   
 
 function altera_msg_login(){
@@ -16,6 +17,7 @@ function altera_msg_login(){
     return 'Credenciais inválidas';
 }
 
+//Adicionar dados do post no header
 add_action( 'wp_head', 'colocar_og_tags' );
 
 function colocar_og_tags(){
