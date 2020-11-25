@@ -8,7 +8,7 @@
 * Author URI: https://github.com/NaranoNVA
 * License: CC BY
 */
-
+add_action('admin_init','set_config');
 
 add_action( 'admin_menu', 'menu_personalizado' );
 
@@ -35,4 +35,11 @@ function abrir_config(){
 
 function abrir_config_sub(){
     include 'plugin_submenu_tpl.php';
+}
+
+function set_config(){
+
+    register_setting( 'configs-exemplo', 'api-token');
+    register_setting( 'configs-exemplo', 'api-url');
+
 }
